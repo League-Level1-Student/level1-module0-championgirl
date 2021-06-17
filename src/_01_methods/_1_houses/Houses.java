@@ -19,22 +19,35 @@ public class Houses {
      coder.setY(500);
      coder.setSpeed(1000);
      coder.penDown();
-     for(int i = 0; i<=10; i++) {
-     houseDrawer();
+     for(int i = 0; i<=8; i++) {
+     houseDrawer(i*50+100);
      }
      coder.hide();
      
      
 	}
-	
+	void houseDrawer(String height) {
+		if(height.equalsIgnoreCase("small")) {
+			houseDrawer(60);
+		}
+		else if(height.equalsIgnoreCase("medium")) {
+			houseDrawer(120);
+		}
+		
+		else if(height.equalsIgnoreCase("Large")) {
+			houseDrawer(250);
+		}
+		
+	}
 	void houseDrawer(int height) {
+		
 	coder.setAngle(0);
 		coder.setRandomPenColor();
-	     coder.move(100);
+	     coder.move(height);
 	     coder.turn(90);
 	     coder.move(50);
 	     coder.turn(90);
-	     coder.move(100);
+	     coder.move(height);
 	     coder.setPenColor(Color.green);
 	     coder.turn(-90);
 	     coder.move(50);
