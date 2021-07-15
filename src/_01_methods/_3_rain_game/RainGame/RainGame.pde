@@ -11,6 +11,8 @@ int score = 0;
 int bucketWidth = 50;
 int bucketHeight;
 PImage bucket;
+PImage rainyDay;
+PImage rainDrop;
 int y;
 int x;
 
@@ -18,19 +20,33 @@ int x;
 void setup() {
 
   //Set your canvas size
-  
+
+size(600,600);
   
   //If you are using an image for the bucket, load it and resize it here.
   // A bucket image -  bucket.png - has been provided if you want to use it.
 
+bucket = loadImage("bucket.png");
+
+rainyDay = loadImage("rainyDay.png");
+
+rainDrop = loadImage("rainDrop.png.png");
+rainDrop.resize(100,100);
+rainyDay.resize(600,600);
+
+
 }
 
-// The draw method runs continuously (in a loop) until the program ends
+// The draw method runs continuously (in a loop) until the program ends                                                              
 void draw() {
   // Set a background color
-  
+
+background(rainyDay);
+image(rainDrop,10,10);
   
   // Draw a raindrop (ellipse) at the top of the screen
+  
+ 
   
   
   
