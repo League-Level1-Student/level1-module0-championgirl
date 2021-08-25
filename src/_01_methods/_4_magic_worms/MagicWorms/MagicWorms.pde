@@ -9,16 +9,24 @@
 void setup() {
 
   //Set your canvas size
-
+size(600,600);
   //Set a background color  
-
+background(51);
 }
 
 // The draw method runs continuously (in a loop) until the program ends
 void draw() {
 
+   makeMagical();
   // STEP 1.
   // Use a for loop to draw 300 small ellipses in a diagonal line across the canvas.
+  
+  for(int i = 1; i < 301; i++){
+  int myRandom = int (random(5,10));
+  fill(frameCount,i,0);
+  ellipse(getWormX(i),getWormY(i),10,10);
+  System.out.println(i);
+  }
   // Make them a bright color.
   // RUN THE PROGRAM TO CHECK IT (see the recipe for the expected outcome).
 
