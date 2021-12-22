@@ -1,49 +1,32 @@
 package _03_gui_from_scratch._1_fortune_cookie;
 
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 public class FortuneCookie {
 	
 	 public void showButton() {
          System.out.println("Button clicked");
-    }
-	 
-	 new FortuneCookie().showButton(frame.setVisible(true));
-}
+         JFrame frame = new JFrame("The Fortune Cookie Program");
+         frame.setVisible(true);
+         
+         JButton button = new JButton("Click for a fortune");
+         frame.add(button);
+     
+        button.addActionListener((ActionListener) this);
+         frame.pack();
+         JOptionPane.showMessageDialog(null, "Woohoo");
+	 }
 
-JButton button = new JButton();
-frame.add(button);
-frame.pack();
+	 actionPerformed(){
+         JOptionPane.showMessageDialog(null, "Woohoo");
 
-JOptionPane.showMessageDialog(null,"WooHoo");
+         int rand = new Random().nextInt(5);
 
-button.addActionListener(this);
-
+	 }
 	 
-int rand = new Random().nextInt(5);
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-}
+} //Public class end DONT REMOVE
 
