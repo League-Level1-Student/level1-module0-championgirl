@@ -13,22 +13,28 @@ import javax.swing.JPanel;
 public class SoundEffectMachine implements ActionListener {
 
 	JFrame frame = new JFrame();
-//	JPanel panel = new JPanel();
+	JPanel panel = new JPanel();
 	JButton laugh = new JButton("laughter");
+	JButton whistle = new JButton("Whistling");
 
 	public void run() {
 
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		//frame.add(panel);
+		// frame.add(panel);
 		frame.pack();
 
 		laugh.addActionListener(this);
+		whistle.addActionListener(this);
 		frame.add(laugh);
+		frame.add(whistle);
+		frame.setTitle("Sounds");
+		frame.add(panel);
+		panel.add(laugh);
+		panel.add(whistle);
+		
 		frame.pack();
 		frame.setTitle("Sounds");
-		
-
 	}
 
 	private void playSound(String soundFile) {
@@ -64,7 +70,12 @@ public class SoundEffectMachine implements ActionListener {
 		}
 
 		frame.pack();
-		
+
+		if (buttonPressed.equals(whistle)) {
+			playSound("whistle.wav");
+		}
+
+		frame.pack();
 	}
 
 }
